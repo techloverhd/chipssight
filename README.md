@@ -6,6 +6,8 @@ front-end and LevelDB for storage.
 
 ## Prerequisites
 
+* **git** - Required for cloning the repos.
+
 * **CHIPS daemon** - Compile from [source](https://github.com/jl777/chips3) and sync fully.
 
 * **chips.conf** - Paste the following inside `chips.conf` file:
