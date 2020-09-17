@@ -156,7 +156,7 @@ This can be changed at config/config.js.
 
 ## API
 
-By default, chipssight provides a REST API at `/api` (`http://explorer.chips.cash/api/`), but this prefix is configurable from the var `apiPrefix` in the `config.js` file.
+By default, chipssight provides a REST API at `/api` (example: `http://explorer.chips.cash/api/`), but this prefix is configurable from the var `apiPrefix` in the `config.js` file.
 
 The end-points are:
 
