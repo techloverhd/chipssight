@@ -42,7 +42,7 @@ rpcport=57776
     
   Then open a browser and go to:
 
-    http://localhost:3001
+    http://localhost:3000
 
 
   Please note that the app will need to sync its internal database
