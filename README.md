@@ -21,7 +21,7 @@ p2pport=57777
 rpcport=57776
 ```
 
-* **Node.js v0.10.x** - Download and Install [Node.js](https://www.nodejs.org/download/).
+* **Node.js v0.10.48** - Download and Install [Node.js](https://nodejs.org/download/release/v0.10.48/).
 
 * **NPM** - Node.js package manager, should be automatically installed when you get node.js.
 
