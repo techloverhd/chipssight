@@ -49,11 +49,7 @@ rpcport=57776
   Please note that the app will need to sync its internal database
   with the blockchain state, which may take some time. You can check
   sync progress from within the web interface.
-
-### API Endpoint
-```
-http://explorer.chips.cash/api/
-```
+  
   
 ## Nginx Setup
 
@@ -160,27 +156,29 @@ This can be changed at config/config.js.
 
 ## API
 
-By default, chipssight provides a REST API at `/api`, but this prefix is configurable from the var `apiPrefix` in the `config.js` file.
+By default, chipssight provides a REST API at `/api` (`http://explorer.chips.cash/api/`), but this prefix is configurable from the var `apiPrefix` in the `config.js` file.
 
 The end-points are:
 
 
 ### Block
 ```
-  /api/block/[:hash]
-  /api/block/00000000a967199a2fad0877433c93df785a8d8ce062e5f9b451cd1397bdbf62
+  http://explorer.chips.cash/api/block/[:hash]
+  http://explorer.chips.cash/api/block/0000006e75f6aa0efdbf7db03132aa4e4d0c84951537a6f5a7c39a0a9d30e1e7
 ```
 ### Block index
 Get block hash by height
 ```
-  /api/block-index/[:height]
-  /api/block-index/0
+  http://explorer.chips.cash/api/block-index/[:height]
+  http://explorer.chips.cash/api/block-index/0
 ```
 This would return:
 ```
-{"blockHash":"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"}
+{"blockHash":"0000006e75f6aa0efdbf7db03132aa4e4d0c84951537a6f5a7c39a0a9d30e1e7"}
 ```
 which is the hash of the Genesis block (0 height)
+
+_for the rest of examples use the URL before the `/api/` endpoints like avobe._
 
 ### Transaction
 ```
