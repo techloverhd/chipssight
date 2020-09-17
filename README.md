@@ -1,7 +1,7 @@
 # *ChipsSight*
 
 *ChipsSight* is an open-source CHIPS blockchain explorer with complete REST
-and websocket APIs adapted from [insight](https://github.com/bitpay/insight) by [SHossain](https://github.com/himu007). ChipsSight runs in NodeJS, uses AngularJS for the
+and websocket APIs ported from [insight](https://github.com/bitpay/insight) by [SHossain](https://github.com/himu007). ChipsSight runs in NodeJS, uses AngularJS for the
 front-end and LevelDB for storage. 
 
 ## Prerequisites
