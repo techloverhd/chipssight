@@ -8,7 +8,7 @@ front-end and LevelDB for storage.
 
 * **CHIPS daemon** - Compile from [source](https://github.com/jl777/chips3) and sync fully.
 
-* **chips.conf** - Paste the following inside your `chips.conf` file:
+* **chips.conf** - Paste the following inside `chips.conf` file:
 ```
 server=1
 daemon=1
