@@ -46,11 +46,14 @@ rpcport=57776
 
     http://localhost:3000
 
-
   Please note that the app will need to sync its internal database
   with the blockchain state, which may take some time. You can check
   sync progress from within the web interface.
-  
+
+### API Endpoint
+```
+http://explorer.chips.cash/api/
+```
   
 ## Nginx Setup
 
