@@ -40,7 +40,7 @@ rpcport=57776
     
   Run the main application:
 
-    $ INSIGHT_NETWORK=livenet BITCOIND_USER=username BITCOIND_PASS=password node node_modules/.bin/insight-bitcore-api
+    $ BITCOIND_HOST=127.0.0.1 BITCOIND_PORT=57776 BITCOIND_USER=username BITCOIND_PASS=password BITCOIND_DATADIR=~/.chips INSIGHT_NETWORK=livenet INSIGHT_PUBLIC_PATH=public INSIGHT_FORCE_RPC_SYNC=1 node node_modules/.bin/insight-bitcore-api
     
   Then open a browser and go to:
 
