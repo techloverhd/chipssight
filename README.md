@@ -1,14 +1,12 @@
 # *ChipsSight*
 
-*ChipsSight* is an open-source CHIPS blockchain explorer with complete REST
-and websocket APIs ported from [insight](https://github.com/bitpay/insight) by [SHossain](https://github.com/himu007). ChipsSight runs in NodeJS, uses AngularJS for the
-front-end and LevelDB for storage. 
+*ChipsSight* is an open-source CHIPS blockchain explorer with complete REST and websocket APIs ported from [insight](https://github.com/bitpay/insight) by [SHossain](https://github.com/himu007). ChipsSight runs in NodeJS, uses AngularJS for the front-end and LevelDB for storage. 
 
 ## Prerequisites
 
-* **git** - Required for cloning the repos.
+* **OS** - Debian/Ubuntu based OS in a VM/Server/Desktop (please don't use containers unless you know what you are doing).
 
-* **CHIPS daemon** - Compile from [source](https://github.com/jl777/chips3) and sync fully.
+* **CHIPS daemon** - Compile from [source](https://github.com/jl777/chips3) and sync fully (you can also use [bootstrap](https://eu.bootstrap.dexstats.info/CHIPS-bootstrap.tar.gz)). 
 
 * **chips.conf** - Paste the following inside `chips.conf` file:
 ```
