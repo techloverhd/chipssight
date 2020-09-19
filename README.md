@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-* **OS** - Debian/Ubuntu based OS in a VM/Server/Desktop (please don't use containers unless you know what you are doing).
+* **OS** - Debian/Ubuntu based OS (please don't use Docker or any other containers unless you know what you are doing).
 
 * **CHIPS daemon** - Compile from [source](https://github.com/jl777/chips3) and sync fully (you can also use [bootstrap](https://eu.bootstrap.dexstats.info/CHIPS-bootstrap.tar.gz)). 
 
