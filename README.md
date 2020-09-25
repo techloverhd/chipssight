@@ -1,12 +1,12 @@
 # *ChipsSight*
 
-*ChipsSight* is an open-source CHIPS blockchain explorer with complete REST
-and websocket APIs adapted from [insight](https://github.com/bitpay/insight) by [SHossain](https://github.com/himu007). ChipsSight runs in NodeJS, uses AngularJS for the
-front-end and LevelDB for storage. 
+*ChipsSight* is an open-source CHIPS blockchain explorer with complete REST and websocket APIs ported from [insight](https://github.com/bitpay/insight) by [SHossain](https://github.com/himu007). ChipsSight runs in NodeJS, uses AngularJS for the front-end and LevelDB for storage. 
 
 ## Prerequisites
 
-* **CHIPS daemon** - Compile from [source](https://github.com/jl777/chips3) and sync fully.
+* **OS** - Debian/Ubuntu based OS (please don't use Docker or any other containers unless you know what you are doing).
+
+* **CHIPS daemon** - Compile from [source](https://github.com/jl777/chips3) and sync fully (you can also use [bootstrap](https://eu.bootstrap.dexstats.info/CHIPS-bootstrap.tar.gz)). 
 
 * **chips.conf** - Paste the following inside `chips.conf` file:
 ```
@@ -21,7 +21,7 @@ p2pport=57777
 rpcport=57776
 ```
 
-* **Node.js v0.10.x** - Download and Install [Node.js](https://www.nodejs.org/download/).
+* **Node.js v0.10.48** - Download and Install [Node.js](https://nodejs.org/download/release/v0.10.48/).
 
 * **NPM** - Node.js package manager, should be automatically installed when you get node.js.
 
@@ -38,12 +38,11 @@ rpcport=57776
     
   Run the main application:
 
-    $ INSIGHT_NETWORK=livenet BITCOIND_USER=username BITCOIND_PASS=password node node_modules/.bin/insight-bitcore-api
+    $ BITCOIND_HOST=127.0.0.1 BITCOIND_PORT=57776 BITCOIND_USER=username BITCOIND_PASS=password BITCOIND_DATADIR=~/.chips INSIGHT_NETWORK=livenet INSIGHT_PUBLIC_PATH=public INSIGHT_FORCE_RPC_SYNC=1 node node_modules/.bin/insight-bitcore-api
     
   Then open a browser and go to:
 
-    http://localhost:3001
-
+    http://localhost:3000
 
   Please note that the app will need to sync its internal database
   with the blockchain state, which may take some time. You can check
@@ -155,27 +154,29 @@ This can be changed at config/config.js.
 
 ## API
 
-By default, chipssight provides a REST API at `/api`, but this prefix is configurable from the var `apiPrefix` in the `config.js` file.
+By default, chipssight provides a REST API at `/api` (example: `http://explorer.chips.cash/api/`), but this prefix is configurable from the var `apiPrefix` in the `config.js` file.
 
 The end-points are:
 
 
 ### Block
 ```
-  /api/block/[:hash]
-  /api/block/00000000a967199a2fad0877433c93df785a8d8ce062e5f9b451cd1397bdbf62
+  http://explorer.chips.cash/api/block/[:hash]
+  http://explorer.chips.cash/api/block/0000006e75f6aa0efdbf7db03132aa4e4d0c84951537a6f5a7c39a0a9d30e1e7
 ```
 ### Block index
 Get block hash by height
 ```
-  /api/block-index/[:height]
-  /api/block-index/0
+  http://explorer.chips.cash/api/block-index/[:height]
+  http://explorer.chips.cash/api/block-index/0
 ```
 This would return:
 ```
-{"blockHash":"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"}
+{"blockHash":"0000006e75f6aa0efdbf7db03132aa4e4d0c84951537a6f5a7c39a0a9d30e1e7"}
 ```
 which is the hash of the Genesis block (0 height)
+
+_for the rest of examples use the URL before the `/api/` endpoints like avobe._
 
 ### Transaction
 ```
