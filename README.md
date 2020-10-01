@@ -17,7 +17,7 @@ listen=1
 rpcuser=username
 rpcpassword=password
 rpcallowip=127.0.0.1
-p2pport=57777
+port=57777
 rpcport=57776
 ```
 
